@@ -27,3 +27,12 @@ This project demonstrates how to deploy an EC2 instance using Terraform.
     ```bash
     terraform apply
     ```
+4. **Destroy with Terraform**:
+    ```bash
+    # Show the plan - requires confirmation to perform.
+    terraform destroy
+    # Create the destroy plan and output to a file for sharing.
+    # Then use that plan to destroy i..
+    terraform plan -destroy -out="destroy.tfplan"
+    terraform apply "destroy.tfplan"
+    ```
