@@ -15,12 +15,12 @@ provider "aws" {
 
 # deploy EC2 instance
 resource "aws_instance" "web_server" {
-    ami           = var.ami_us-east-2_linux2
+    ami           = var.ami_us-east-2_linux2023
     instance_type = "t2.micro"
 
     tags = {
         Environment = var.environment
-        Name        = "WebServer"
+        Name        = "WebAppServer"
         terraform = "true"
     }
 }
